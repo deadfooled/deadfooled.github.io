@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Post Data Example</title>
+    <script>
+      function postData() {
+        var data = {
+          trx_id: "FORMI/VRKE/401/1688442793677"
+        };
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "https://formi-service-dev.formi.id/webhook/simulate-e-wallet-payment", true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            console.log("Data posted successfully!");
+          }
+        };
+
+        xhr.send(JSON.stringify(data));
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Post Data Example</h1>
+    <button onclick="postData()">Post Data</button>
+  </body>
+</html>
