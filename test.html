@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Redirect Example</title>
-  </head>
-  <body>
-    <h1>Redirect Example</h1>
-    <button onclick="redirect()">Click to Redirect</button>
+<head>
+  <title>Redirect 222</title>
+</head>
+<body>
+  <h1>Redirect Example</h1>
+  <button onclick="redirect()">Open app</button>
 
-    <script>
-      function redirect() {
-      // Replace 'myapp://myweb.com?anyparam=123' with your desired URL scheme
-      var url = 'formiapp://formi.id/link?route=user_schedule&appointment_id=1411';
-      window.location.href = url;
+  <script>
+    function redirect() {
+      var link = document.createElement('a');
+      link.href = 'formiapp://formi.id/link?route=user_schedule&appointment_id=1411';
+      link.click();
     }
-    </script>
-  </body>
+  </script>
+</body>
 </html>
