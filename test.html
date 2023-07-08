@@ -5,23 +5,7 @@
 </head>
 <body>
   <h1>Open Apps</h1>
-  <button onclick="redirect()">Click to Open App</button>
 
-  <script>
-    function redirect() {
-      // Replace 'myapp://myweb.com?anyparam=123' with your desired URL scheme
-      var url = 'formiapp://formi.id/link?route=user_schedule&appointment_id=1411';
-      
-      var iframe = document.createElement('iframe');
-      iframe.style.display = 'none';
-      iframe.src = url;
-      
-      document.body.appendChild(iframe);
-      setTimeout(function() {
-        document.body.removeChild(iframe);
-        window.location.replace(url);
-      }, 500);
-    }
-  </script>
+<a href="formiapp://formi.id/link?route=user_schedule&appointment_id=1411" target="_blank">Open App</a>
 </body>
 </html>
