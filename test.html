@@ -2,11 +2,16 @@
 <html>
 <head>
   <title>Open App</title>
+  <script>
+    function openTab() {
+    window.open("formiappdev://formi.id/link?route=user_schedule&appointment_id=1411", "_blank");
+    }
+  </script>
 </head>
 <body>
   <h1>Open Apps</h1>
 
-<a href="formiappdev://formi.id/link?route=user_schedule&appointment_id=1411" target="_blank">Open Dev App</a>
+<button onclick="openTab()">Open Dev App Gan</button>
   <br>
   <a href="formiappstaging://formi.id/link?route=user_schedule&appointment_id=1411" target="_blank">Open Staging App</a>
   <br>
